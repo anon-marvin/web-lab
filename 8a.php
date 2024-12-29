@@ -1,63 +1,15 @@
 <?php
-$counterFile = "counter.txt";
-
-if (!file_exists($counterFile)) {
-    file_put_contents($counterFile, "0");
+$file="counter.txt";
+if(!file_exists($file)){
+    file_put_contents($file,"0");
 }
-
-$currentCount = file_get_contents($counterFile);
-
-$newCount = $currentCount + 1;
-
-file_put_contents($counterFile, $newCount);
+$old_count=file_get_contents($file);
+$new_count=$old_count+1;
+file_put_contents($file,$new_count)
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-    <title>Visitor Counter | vtucode</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            height: 100vh;
-            background-color: #f4f4f9;
-            color: #333;
-        }
-
-        .container {
-            background: #fff;
-            padding: 20px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            margin: 0 auto;
-            width: 60%;
-        }
-
-        h1 {
-            font-size: 2.5em;
-            margin: 0;
-        }
-
-        p {
-            font-size: 1.2em;
-            color: #555;
-        }
-    </style>
-</head>
-
+<html>
 <body>
-    <div class="container">
-        <h1>Welcome to Our Website!</h1>
-        <p>You are visitor number: <strong><?php echo $newCount; ?></strong></p>
-    </div>
+<h1>Visitor Count</h1>
+<p>The Count is <?php echo $new_count ?></p>
 </body>
-
 </html>
