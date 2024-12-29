@@ -96,51 +96,8 @@ selectionSort($students, 'name');
             color: #555;
         }
 
-        @media (max-width: 768px) {
-
-            table,
-            th,
-            td {
-                display: block;
-                width: 100%;
-            }
-
-            th,
-            td {
-                box-sizing: border-box;
-            }
-
-            tr {
-                margin-bottom: 15px;
-                display: block;
-                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            }
-
-            th {
-                position: absolute;
-                top: -9999px;
-                left: -9999px;
-            }
-
-            td {
-                border: none;
-                position: relative;
-                padding-left: 50%;
-                text-align: right;
-            }
-
-            td:before {
-                content: attr(data-label);
-                position: absolute;
-                left: 0;
-                width: 50%;
-                padding-left: 15px;
-                font-weight: bold;
-                text-align: left;
-                text-transform: uppercase;
-                color: #4A90E2;
-            }
-        }
+     
+        
     </style>
 </head>
 
